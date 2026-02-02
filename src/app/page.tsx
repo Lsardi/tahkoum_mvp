@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   Settings,
   Library,
+  ArrowLeftRight,
 } from 'lucide-react';
 import { useUserStore } from '@/stores/userStore';
 import { modules } from '@/lib/data/modules';
@@ -62,41 +63,53 @@ export default function HomePage() {
 
       <main className="max-w-2xl mx-auto px-4 pt-6">
         {/* Quick actions */}
-        <div className="grid grid-cols-3 gap-3 mb-8">
+        <div className="grid grid-cols-4 gap-2 mb-8">
           <Link
             href="/review"
-            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500/50 transition"
+            className="flex flex-col items-center gap-1.5 p-3 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500/50 transition"
           >
-            <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-              <RotateCcw className="w-5 h-5 text-purple-400" />
+            <div className="w-9 h-9 rounded-lg bg-purple-500/20 flex items-center justify-center">
+              <RotateCcw className="w-4 h-4 text-purple-400" />
             </div>
             <div className="text-center">
-              <div className="font-medium text-sm">Révision</div>
-              <div className="text-xs text-slate-500">Cartes SRS</div>
+              <div className="font-medium text-xs">Révision</div>
+              <div className="text-[10px] text-slate-500">SRS</div>
             </div>
           </Link>
           <Link
             href="/tutor"
-            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-blue-500/50 transition"
+            className="flex flex-col items-center gap-1.5 p-3 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-blue-500/50 transition"
           >
-            <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-              <MessageCircle className="w-5 h-5 text-blue-400" />
+            <div className="w-9 h-9 rounded-lg bg-blue-500/20 flex items-center justify-center">
+              <MessageCircle className="w-4 h-4 text-blue-400" />
             </div>
             <div className="text-center">
-              <div className="font-medium text-sm">Tuteur</div>
-              <div className="text-xs text-slate-500">Karim IA</div>
+              <div className="font-medium text-xs">Tuteur</div>
+              <div className="text-[10px] text-slate-500">Karim IA</div>
             </div>
           </Link>
           <Link
             href="/lexique"
-            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-amber-500/50 transition"
+            className="flex flex-col items-center gap-1.5 p-3 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-amber-500/50 transition"
           >
-            <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
-              <Library className="w-5 h-5 text-amber-400" />
+            <div className="w-9 h-9 rounded-lg bg-amber-500/20 flex items-center justify-center">
+              <Library className="w-4 h-4 text-amber-400" />
             </div>
             <div className="text-center">
-              <div className="font-medium text-sm">Lexique</div>
-              <div className="text-xs text-slate-500">Arabizi & Ref</div>
+              <div className="font-medium text-xs">Lexique</div>
+              <div className="text-[10px] text-slate-500">Arabizi</div>
+            </div>
+          </Link>
+          <Link
+            href="/correspondance"
+            className="flex flex-col items-center gap-1.5 p-3 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-cyan-500/50 transition"
+          >
+            <div className="w-9 h-9 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+              <ArrowLeftRight className="w-4 h-4 text-cyan-400" />
+            </div>
+            <div className="text-center">
+              <div className="font-medium text-xs">Langues</div>
+              <div className="text-[10px] text-slate-500">FR↔DZ↔KAB</div>
             </div>
           </Link>
         </div>

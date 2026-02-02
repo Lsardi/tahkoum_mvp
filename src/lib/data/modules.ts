@@ -8,6 +8,7 @@ import { coursesMarcheLesson } from './lessons/courses-marche';
 import { familleSocialLesson } from './lessons/famille-social';
 import { arabiziLesson } from './lessons/arabizi';
 import { memesHumourLesson } from './lessons/memes-humour';
+import { alphabetLesson } from './lessons/alphabet';
 
 export const modules: Module[] = [
   {
@@ -18,6 +19,7 @@ export const modules: Module[] = [
       'Les bases indispensables pour tes premiers jours en Algérie.',
     order: 1,
     lessons: [
+      alphabetLesson,
       salutationsLesson,
       sePresenterLesson,
       chiffresArgentLesson,
