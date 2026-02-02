@@ -1,0 +1,472 @@
+import type { Lesson } from '@/lib/types';
+
+export const coursesMarcheLesson: Lesson = {
+  id: 'daily-courses-marche',
+  moduleId: 'daily_life',
+  title: 'Faire les courses au marché',
+  description:
+    'Vocabulaire alimentaire, commander au marché et en épicerie, et les bonnes manières.',
+  level: 2,
+  estimatedMinutes: 25,
+
+  theory: {
+    introduction: `Faire les courses en Algérie, c'est une expérience sociale. Le marché (souk) est un lieu de vie où tu croises les mêmes vendeurs chaque semaine. Créer une relation avec "ton" boucher, "ton" marchand de légumes, c'est la clé pour avoir les meilleurs prix et les meilleurs produits.
+
+**Les types de commerces :**
+- **Souk / Marché** — fruits, légumes, viandes, épices (négociation OK)
+- **Épicerie (Hanout)** — produits du quotidien, prix fixes
+- **Supermarché** — prix fixes, pas de négociation
+- **Boulangerie (Makhbaza)** — pain, viennoiseries
+
+**Le pain (khoubz)** est sacré en Algérie. On ne le jette JAMAIS par terre. On le pose toujours à l'endroit. C'est un geste de respect profond.`,
+
+    concepts: [
+      {
+        id: 'food-basics',
+        title: 'Les aliments de base',
+        explanation: `Voici le vocabulaire alimentaire essentiel. Ces mots tu les utiliseras chaque jour. Beaucoup de mots français sont intégrés dans la darija ("la table", "la cuisine") mais les aliments de base ont leurs mots darija propres.`,
+        examples: [
+          {
+            id: 'food-1',
+            arabic: 'خبز',
+            latin: 'Khoubz',
+            phonetic: 'KHOUBZ',
+            french: 'Pain',
+            language: 'darija',
+            tags: ['nourriture', 'base', 'essentiel'],
+          },
+          {
+            id: 'food-2',
+            arabic: 'حليب',
+            latin: 'Hlib',
+            phonetic: 'H-LIB',
+            french: 'Lait',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-3',
+            arabic: 'ماء',
+            latin: 'Ma',
+            phonetic: 'MA',
+            french: 'Eau',
+            language: 'darija',
+            tags: ['nourriture', 'base', 'essentiel'],
+          },
+          {
+            id: 'food-4',
+            arabic: 'لحم',
+            latin: 'Lhem',
+            phonetic: 'L-HEM',
+            french: 'Viande',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-5',
+            arabic: 'دجاج',
+            latin: 'Djaj',
+            phonetic: 'DJAJ',
+            french: 'Poulet',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-6',
+            arabic: 'حوت',
+            latin: 'Hout',
+            phonetic: 'HOUT',
+            french: 'Poisson',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-7',
+            arabic: 'بيض',
+            latin: 'Baydh',
+            phonetic: 'BAYDH',
+            french: 'Oeufs',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-8',
+            arabic: 'زيت',
+            latin: 'Zit',
+            phonetic: 'ZIT',
+            french: 'Huile',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-9',
+            arabic: 'ملح',
+            latin: 'Melh',
+            phonetic: 'MELH',
+            french: 'Sel',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+          {
+            id: 'food-10',
+            arabic: 'سكر',
+            latin: 'Sokkor',
+            phonetic: 'SOK-kor',
+            french: 'Sucre',
+            language: 'darija',
+            tags: ['nourriture', 'base'],
+          },
+        ],
+        culturalNote:
+          'Le pain (khoubz) est la base de tout repas algérien. On mange presque tout avec du pain. Le "khoubz eddar" (pain maison) est un signe d\'hospitalité — si on t\'en offre, c\'est un honneur.',
+      },
+      {
+        id: 'fruits-legumes',
+        title: 'Fruits et légumes courants',
+        explanation: `Les fruits et légumes au marché algérien sont souvent excellents — tomates, poivrons, oranges, dattes... Voici les plus courants avec les mots darija (certains viennent du français !).`,
+        examples: [
+          {
+            id: 'fl-1',
+            arabic: 'طماطم',
+            latin: 'Tomatich',
+            phonetic: 'to-ma-TICH',
+            french: 'Tomates',
+            language: 'darija',
+            tags: ['nourriture', 'légume'],
+          },
+          {
+            id: 'fl-2',
+            arabic: 'بطاطا',
+            latin: 'Batata',
+            phonetic: 'ba-TA-ta',
+            french: 'Pommes de terre',
+            language: 'darija',
+            tags: ['nourriture', 'légume'],
+          },
+          {
+            id: 'fl-3',
+            arabic: 'بصل',
+            latin: 'Bsel',
+            phonetic: 'B-SEL',
+            french: 'Oignons',
+            language: 'darija',
+            tags: ['nourriture', 'légume'],
+          },
+          {
+            id: 'fl-4',
+            arabic: 'فلفل',
+            latin: 'Felfel',
+            phonetic: 'FEL-fel',
+            french: 'Poivrons / Piments',
+            language: 'darija',
+            tags: ['nourriture', 'légume'],
+          },
+          {
+            id: 'fl-5',
+            arabic: 'برتقال',
+            latin: 'Bortouqal',
+            phonetic: 'bor-tou-QAL',
+            french: 'Oranges',
+            language: 'darija',
+            tags: ['nourriture', 'fruit'],
+          },
+          {
+            id: 'fl-6',
+            arabic: 'تفاح',
+            latin: 'Teffah',
+            phonetic: 'TEF-fah',
+            french: 'Pommes',
+            language: 'darija',
+            tags: ['nourriture', 'fruit'],
+          },
+          {
+            id: 'fl-7',
+            arabic: 'تمر',
+            latin: 'Tmer',
+            phonetic: 'T-MER',
+            french: 'Dattes',
+            language: 'darija',
+            tags: ['nourriture', 'fruit'],
+          },
+        ],
+        culturalNote:
+          'Les dattes (tmer) sont un symbole d\'hospitalité. On les offre aux invités avec du lait ou du café. La variété "Deglet Nour" du sud algérien est considérée comme la meilleure au monde.',
+      },
+      {
+        id: 'drinks',
+        title: 'Boissons et café',
+        explanation: `Le café (qahwa) et le thé (atay) sont au coeur de la vie sociale algérienne. Au café, les hommes se retrouvent pour discuter. Le thé à la menthe est servi partout, souvent très sucré.`,
+        examples: [
+          {
+            id: 'drink-1',
+            arabic: 'قهوة',
+            latin: 'Qahwa',
+            phonetic: 'QAH-wa',
+            french: 'Café',
+            language: 'darija',
+            tags: ['boisson', 'essentiel'],
+          },
+          {
+            id: 'drink-2',
+            arabic: 'أتاي',
+            latin: 'Atay',
+            phonetic: 'A-tay',
+            french: 'Thé (à la menthe)',
+            language: 'darija',
+            tags: ['boisson', 'essentiel'],
+          },
+          {
+            id: 'drink-3',
+            arabic: 'قهوة كحلة',
+            latin: 'Qahwa kahla',
+            phonetic: 'QAH-wa KAH-la',
+            french: 'Café noir (express)',
+            language: 'darija',
+            tags: ['boisson', 'café'],
+          },
+          {
+            id: 'drink-4',
+            arabic: 'قهوة بالحليب',
+            latin: 'Qahwa b\'el hlib',
+            phonetic: 'QAH-wa bel H-LIB',
+            french: 'Café au lait',
+            language: 'darija',
+            tags: ['boisson', 'café'],
+          },
+        ],
+        culturalNote:
+          'Au café algérien, on ne presse jamais quelqu\'un de partir. Tu peux rester des heures avec un seul café. C\'est un lieu de socialisation, pas juste un commerce.',
+      },
+      {
+        id: 'food-kabyle',
+        title: 'Vocabulaire alimentaire kabyle',
+        explanation: `En Kabylie, certains aliments ont des noms berbères spécifiques. Le couscous (seksu) et le pain kabyle (aghrum) sont les piliers de la cuisine.`,
+        examples: [
+          {
+            id: 'kab-food-1',
+            arabic: 'ⴰⵖⵔⵓⵎ',
+            latin: 'Aghrum',
+            phonetic: 'a-GHROUM',
+            french: 'Pain (kabyle)',
+            language: 'kabyle',
+            tags: ['nourriture', 'kabyle', 'base'],
+          },
+          {
+            id: 'kab-food-2',
+            arabic: 'ⵙⴻⴽⵙⵓ',
+            latin: 'Seksu',
+            phonetic: 'SEK-sou',
+            french: 'Couscous (kabyle)',
+            language: 'kabyle',
+            tags: ['nourriture', 'kabyle', 'base'],
+          },
+          {
+            id: 'kab-food-3',
+            arabic: 'ⴰⴽⵙⵓⵎ',
+            latin: 'Aksum',
+            phonetic: 'AK-soum',
+            french: 'Viande (kabyle)',
+            language: 'kabyle',
+            tags: ['nourriture', 'kabyle'],
+          },
+          {
+            id: 'kab-food-4',
+            arabic: 'ⴰⵎⴰⵏ',
+            latin: 'Aman',
+            phonetic: 'A-man',
+            french: 'Eau (kabyle)',
+            language: 'kabyle',
+            tags: ['nourriture', 'kabyle', 'base'],
+          },
+        ],
+        culturalNote:
+          'Le couscous du vendredi est une tradition sacrée en Kabylie. La famille se réunit autour du "seksu" après la prière. Le refuser quand on t\'invite serait très mal vu.',
+      },
+    ],
+
+    culturalContext: `**La cuisine algérienne — Ce qu'il faut savoir :**
+
+La cuisine algérienne est riche et variée. Chaque région a ses spécialités :
+- **Alger** : Garantita (flan de pois chiches), bourek, chorba
+- **Kabylie** : Couscous aux légumes, aghrum (pain), thifrifrin (crêpes)
+- **Oran** : Karantika, paella algérienne
+- **Constantine** : Jari (soupe), rechta (pâtes)
+- **Sud** : Méchoui, dattes, lait de chamelle
+
+**Règles de base :**
+1. On mange souvent avec la main droite (jamais la gauche)
+2. On partage les plats — manger seul est triste
+3. L'hôte insiste TOUJOURS pour te resservir — accepte au moins une fois
+4. Dire "Saha" (santé) après le repas = bonne éducation
+5. "Bsaha" = bon appétit`,
+  },
+
+  practice: {
+    guidedExercises: [
+      {
+        id: 'food-p1',
+        type: 'multiple_choice',
+        question: 'Comment dit-on "pain" en darija ?',
+        options: ['Hlib', 'Khoubz', 'Lhem', 'Zit'],
+        correctAnswer: 'Khoubz',
+        hint: 'Le "kh" est un son guttural, comme un "r" roulé au fond de la gorge.',
+        explanation: '"Khoubz" (خبز) = pain. C\'est le mot que tu entendras le plus en Algérie. Le pain est la base de chaque repas.',
+        difficulty: 1,
+        xpReward: 10,
+      },
+      {
+        id: 'food-p2',
+        type: 'fill_blank',
+        question: 'Pour commander un café au lait, tu dis : "Qahwa _____"',
+        correctAnswer: 'b\'el hlib',
+        acceptableAnswers: ['bel hlib', 'b\'el hlib', 'belhlib', 'bel 7lib'],
+        hint: '"avec le lait" = "b\'el hlib"',
+        explanation: '"Qahwa b\'el hlib" = café au lait. "b\'el" = "avec le" (contraction de "bi" + "el").',
+        difficulty: 1,
+        xpReward: 15,
+      },
+      {
+        id: 'food-p3',
+        type: 'multiple_choice',
+        question: 'Comment dit-on "eau" en kabyle ?',
+        options: ['Ma', 'Aman', 'Hlib', 'Atay'],
+        correctAnswer: 'Aman',
+        hint: 'C\'est un mot berbère pur.',
+        explanation: '"Aman" = eau en kabyle. "Ma" = eau en darija. Deux mots différents pour deux langues différentes !',
+        difficulty: 1,
+        xpReward: 10,
+      },
+      {
+        id: 'food-p4',
+        type: 'multiple_choice',
+        question: 'Comment dit-on "couscous" en kabyle ?',
+        options: ['Aghrum', 'Seksu', 'Aksum', 'Khoubz'],
+        correctAnswer: 'Seksu',
+        hint: 'C\'est le plat national !',
+        explanation: '"Seksu" est le mot kabyle/berbère pour le couscous. Le mot "couscous" en français vient d\'ailleurs du berbère "kuskus" !',
+        difficulty: 1,
+        xpReward: 10,
+      },
+      {
+        id: 'food-p5',
+        type: 'fill_blank',
+        question: 'Pour dire "Donne-moi un kilo de tomates" : "_____ kilo dyal tomatich"',
+        correctAnswer: 'Aatini',
+        acceptableAnswers: ['aatini', 'Aatini', 'aateni', '3atini'],
+        hint: 'Ça commence par "Aa-" (le son ع)',
+        explanation: '"Aatini" = donne-moi. C\'est un impératif très courant. "Aatini wahd..." = donne-moi un...',
+        difficulty: 2,
+        xpReward: 15,
+      },
+    ],
+  },
+
+  assessment: {
+    exercises: [
+      {
+        id: 'food-t1',
+        type: 'multiple_choice',
+        question: 'Quel est le mot darija pour "poisson" ?',
+        options: ['Djaj', 'Lhem', 'Hout', 'Baydh'],
+        correctAnswer: 'Hout',
+        difficulty: 1,
+        xpReward: 15,
+      },
+      {
+        id: 'food-t2',
+        type: 'fill_blank',
+        question: 'Le pain en kabyle se dit "_____".',
+        correctAnswer: 'Aghrum',
+        acceptableAnswers: ['aghrum', 'Aghrum', 'aghroum'],
+        difficulty: 2,
+        xpReward: 15,
+      },
+      {
+        id: 'food-t3',
+        type: 'translation',
+        question: 'Comment dit-on "thé" en darija ?',
+        correctAnswer: 'Atay',
+        acceptableAnswers: ['atay', 'Atay', 'atey'],
+        difficulty: 1,
+        xpReward: 15,
+      },
+      {
+        id: 'food-t4',
+        type: 'free_response',
+        question: 'Tu entres dans un café. Commande un café noir et un thé à la menthe pour ton ami. Écris en darija.',
+        correctAnswer: 'Salam, aatini wahd qahwa kahla ou wahd atay. Saha.',
+        acceptableAnswers: ['qahwa', 'kahla', 'atay', 'aatini', 'saha'],
+        explanation: 'Exemple : "Salam! Aatini wahd qahwa kahla ou wahd atay, min fadlek. Saha!"',
+        difficulty: 3,
+        xpReward: 30,
+      },
+    ],
+    passingScore: 70,
+  },
+
+  reviewPhrases: [
+    {
+      id: 'food-1',
+      arabic: 'خبز',
+      latin: 'Khoubz',
+      phonetic: 'KHOUBZ',
+      french: 'Pain',
+      language: 'darija',
+      tags: ['nourriture'],
+    },
+    {
+      id: 'food-3',
+      arabic: 'ماء',
+      latin: 'Ma',
+      phonetic: 'MA',
+      french: 'Eau',
+      language: 'darija',
+      tags: ['nourriture'],
+    },
+    {
+      id: 'drink-1',
+      arabic: 'قهوة',
+      latin: 'Qahwa',
+      phonetic: 'QAH-wa',
+      french: 'Café',
+      language: 'darija',
+      tags: ['boisson'],
+    },
+    {
+      id: 'drink-2',
+      arabic: 'أتاي',
+      latin: 'Atay',
+      phonetic: 'A-tay',
+      french: 'Thé',
+      language: 'darija',
+      tags: ['boisson'],
+    },
+    {
+      id: 'kab-food-1',
+      arabic: 'ⴰⵖⵔⵓⵎ',
+      latin: 'Aghrum',
+      phonetic: 'a-GHROUM',
+      french: 'Pain (kabyle)',
+      language: 'kabyle',
+      tags: ['nourriture', 'kabyle'],
+    },
+    {
+      id: 'kab-food-2',
+      arabic: 'ⵙⴻⴽⵙⵓ',
+      latin: 'Seksu',
+      phonetic: 'SEK-sou',
+      french: 'Couscous (kabyle)',
+      language: 'kabyle',
+      tags: ['nourriture', 'kabyle'],
+    },
+    {
+      id: 'kab-food-4',
+      arabic: 'ⴰⵎⴰⵏ',
+      latin: 'Aman',
+      phonetic: 'A-man',
+      french: 'Eau (kabyle)',
+      language: 'kabyle',
+      tags: ['nourriture', 'kabyle'],
+    },
+  ],
+};

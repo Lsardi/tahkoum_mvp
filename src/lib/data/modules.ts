@@ -1,5 +1,11 @@
 import type { Module } from '@/lib/types';
 import { salutationsLesson } from './lessons/salutations';
+import { sePresenterLesson } from './lessons/se-presenter';
+import { chiffresArgentLesson } from './lessons/chiffres-argent';
+import { directionsTransportLesson } from './lessons/directions-transport';
+import { verbesEssentielsLesson } from './lessons/verbes-essentiels';
+import { coursesMarcheLesson } from './lessons/courses-marche';
+import { familleSocialLesson } from './lessons/famille-social';
 
 export const modules: Module[] = [
   {
@@ -9,7 +15,13 @@ export const modules: Module[] = [
     description:
       'Les bases indispensables pour tes premiers jours en Algérie.',
     order: 1,
-    lessons: [salutationsLesson],
+    lessons: [
+      salutationsLesson,
+      sePresenterLesson,
+      chiffresArgentLesson,
+      directionsTransportLesson,
+      verbesEssentielsLesson,
+    ],
   },
   {
     id: 'daily_life',
@@ -17,7 +29,7 @@ export const modules: Module[] = [
     icon: '🏪',
     description: 'Faire les courses, aller au café, se déplacer...',
     order: 2,
-    lessons: [], // Coming soon
+    lessons: [coursesMarcheLesson],
   },
   {
     id: 'admin',
@@ -41,7 +53,7 @@ export const modules: Module[] = [
     icon: '👥',
     description: 'Amis, famille, fêtes, traditions...',
     order: 5,
-    lessons: [],
+    lessons: [familleSocialLesson],
   },
   {
     id: 'kabylie',
