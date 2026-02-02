@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Volume2, Eye, EyeOff } from 'lucide-react';
 import type { MultiScriptPhrase } from '@/lib/types';
+import { pronouncePhrase, isSpeechSupported } from '@/lib/audio';
 
 interface PhraseCardProps {
   phrase: MultiScriptPhrase;
@@ -17,8 +18,20 @@ export default function PhraseCard({
   compact = false,
 }: PhraseCardProps) {
   const [revealed, setRevealed] = useState(showAll);
+  const [hasAudio, setHasAudio] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
   const isKabyle = phrase.language === 'kabyle';
+
+  useEffect(() => {
+    setHasAudio(isSpeechSupported());
+  }, []);
+
+  function handleSpeak() {
+    setPlaying(true);
+    pronouncePhrase(phrase);
+    setTimeout(() => setPlaying(false), 2000);
+  }
 
   return (
     <motion.div
@@ -28,7 +41,7 @@ export default function PhraseCard({
         compact ? 'p-3' : 'p-4'
       } bg-slate-800/50`}
     >
-      {/* Language badge */}
+      {/* Language badge + controls */}
       <div className="flex items-center justify-between mb-2">
         <span
           className={`text-xs px-2 py-0.5 rounded-full ${
@@ -39,18 +52,33 @@ export default function PhraseCard({
         >
           {isKabyle ? 'Kabyle' : 'Darija'}
         </span>
-        {!showAll && (
-          <button
-            onClick={() => setRevealed(!revealed)}
-            className="text-slate-400 hover:text-slate-200 transition"
-          >
-            {revealed ? (
-              <EyeOff className="w-4 h-4" />
-            ) : (
-              <Eye className="w-4 h-4" />
-            )}
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {hasAudio && (
+            <button
+              onClick={handleSpeak}
+              className={`transition ${
+                playing
+                  ? 'text-purple-400 animate-pulse'
+                  : 'text-slate-400 hover:text-purple-400'
+              }`}
+              title="Écouter la prononciation"
+            >
+              <Volume2 className="w-4 h-4" />
+            </button>
+          )}
+          {!showAll && (
+            <button
+              onClick={() => setRevealed(!revealed)}
+              className="text-slate-400 hover:text-slate-200 transition"
+            >
+              {revealed ? (
+                <EyeOff className="w-4 h-4" />
+              ) : (
+                <Eye className="w-4 h-4" />
+              )}
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Arabic/Tifinagh script */}

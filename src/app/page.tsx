@@ -10,6 +10,7 @@ import {
   Lock,
   CheckCircle2,
   Settings,
+  Library,
 } from 'lucide-react';
 import { useUserStore } from '@/stores/userStore';
 import { modules } from '@/lib/data/modules';
@@ -61,33 +62,41 @@ export default function HomePage() {
 
       <main className="max-w-2xl mx-auto px-4 pt-6">
         {/* Quick actions */}
-        <div className="grid grid-cols-2 gap-3 mb-8">
+        <div className="grid grid-cols-3 gap-3 mb-8">
           <Link
             href="/review"
-            className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500/50 transition"
+            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-purple-500/50 transition"
           >
             <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
               <RotateCcw className="w-5 h-5 text-purple-400" />
             </div>
-            <div>
+            <div className="text-center">
               <div className="font-medium text-sm">Révision</div>
-              <div className="text-xs text-slate-500">
-                Cartes SRS
-              </div>
+              <div className="text-xs text-slate-500">Cartes SRS</div>
             </div>
           </Link>
           <Link
             href="/tutor"
-            className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-blue-500/50 transition"
+            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-blue-500/50 transition"
           >
             <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-blue-400" />
             </div>
-            <div>
+            <div className="text-center">
               <div className="font-medium text-sm">Tuteur</div>
-              <div className="text-xs text-slate-500">
-                Parle avec Karim
-              </div>
+              <div className="text-xs text-slate-500">Karim IA</div>
+            </div>
+          </Link>
+          <Link
+            href="/lexique"
+            className="flex flex-col items-center gap-2 p-4 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-amber-500/50 transition"
+          >
+            <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+              <Library className="w-5 h-5 text-amber-400" />
+            </div>
+            <div className="text-center">
+              <div className="font-medium text-sm">Lexique</div>
+              <div className="text-xs text-slate-500">Arabizi & Ref</div>
             </div>
           </Link>
         </div>

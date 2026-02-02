@@ -65,8 +65,8 @@ export default function TutorPage() {
       ];
 
       const response = await chatWithOllama(ollamaMessages, {
-        temperature: 0.8,
-        maxTokens: 1024,
+        temperature: 0.7,
+        maxTokens: 2048,
       });
 
       const assistantMsg: ChatMessage = {

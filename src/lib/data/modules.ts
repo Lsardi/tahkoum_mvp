@@ -6,6 +6,8 @@ import { directionsTransportLesson } from './lessons/directions-transport';
 import { verbesEssentielsLesson } from './lessons/verbes-essentiels';
 import { coursesMarcheLesson } from './lessons/courses-marche';
 import { familleSocialLesson } from './lessons/famille-social';
+import { arabiziLesson } from './lessons/arabizi';
+import { memesHumourLesson } from './lessons/memes-humour';
 
 export const modules: Module[] = [
   {
@@ -69,7 +71,7 @@ export const modules: Module[] = [
     icon: '🇩🇿',
     description: 'Argot, contractions, humour, proverbes...',
     order: 7,
-    lessons: [],
+    lessons: [arabiziLesson, memesHumourLesson],
   },
 ];
 
